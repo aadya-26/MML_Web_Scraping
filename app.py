@@ -6,7 +6,7 @@ import numpy as np
 
 st.set_page_config(page_title="NYC Museum Exhibitions", layout="wide")
 
-st.title("🗽NYC Museum Exhibitions Explorer")
+st.title("🗽NYC Museum Exhibitions Archive")
 st.markdown("Explore exhibitions, search by keyword, and view word clouds.")
 
 # Load and process data
@@ -107,4 +107,5 @@ st.dataframe(
 
 # Download filtered data
 csv = filtered_df.to_csv(index=False).encode("utf-8")
+
 st.download_button("Download filtered data as CSV", csv, "filtered_exhibitions.csv", "text/csv")
